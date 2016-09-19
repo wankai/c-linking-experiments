@@ -1,1 +1,1 @@
-int b;
+int a;
