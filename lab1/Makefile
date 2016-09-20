@@ -4,18 +4,23 @@ LD=ld
 
 all: test1_alone.o, test1_static.o, test1_shared.o
 
-test1_alone: test1.c
+test1_alone.o: test1.c
 	$(CC) -c -o test1_alone.o test1.c
 
-test1_static: test1.c libtest3.a
+test1_static.o: test1.c libtest3.a
 	$(CC) -c -o test1_static.o test1.c -L./ -ltest3
 
-test1_shared: test1.c libtest4.so
+test1_shared.o: test1.c libtest4.so
 	$(CC) -c -o test1_shared.o test1.c -L./ -ltest4
-	
-libtest3.a
+
+test2.o: test2.c
+	$(CC) -c test2.c
+test3.o: test3.c
 	$(CC) -c test3.c
-	$(AR)
+
+libtest3.a: test3.o
+	$(CC) -c test3.c
+	$(AR) crv libtest3.a test3.o
 
 libtest4.so
 	$(CC) -shared -fPIC
