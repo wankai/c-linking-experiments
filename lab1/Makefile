@@ -26,8 +26,6 @@ libtest4.so: test4.o
 	$(CC) -shared -o libtest4.so test4.o
 	
 clean:
-	rm test1_alone.o
-	rm test1_static.o
-	rm test1_shared.o
+	rm *.o
 	rm libtest3.a
 	rm libtest4.so
