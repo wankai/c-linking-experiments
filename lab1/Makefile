@@ -2,7 +2,7 @@ CC=gcc
 AR=ar
 LD=ld
 
-all: test1_alone.o, test1_static.o, test1_shared.o
+all: test1_alone.o test1_static.o test1_shared.o
 
 test1_alone.o: test1.c
 	$(CC) -c -o test1_alone.o test1.c
