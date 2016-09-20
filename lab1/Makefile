@@ -34,5 +34,5 @@ clean:
 	rm test1_alone.o
 	rm test1_static.o
 	rm test1_shared.o
-	rm libtest2.a
+	rm libtest3.a
 	rm libtest4.so
