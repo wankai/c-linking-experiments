@@ -17,10 +17,15 @@ test2.o: test2.c
 	$(CC) -c test2.c
 test3.o: test3.c
 	$(CC) -c test3.c
+test4.o: test4.c
+	$(CC) -fPIC -c test4.c
 
 libtest3.a: test3.o
-	$(CC) -c test3.c
 	$(AR) crv libtest3.a test3.o
+libtest4.so: test4.o
+	$(CC) -shared -o libtest4.so test4.o
+	
+	
 
 libtest4.so
 	$(CC) -shared -fPIC
