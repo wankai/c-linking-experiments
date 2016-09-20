@@ -25,11 +25,6 @@ libtest3.a: test3.o
 libtest4.so: test4.o
 	$(CC) -shared -o libtest4.so test4.o
 	
-	
-
-libtest4.so
-	$(CC) -shared -fPIC
-	
 clean:
 	rm test1_alone.o
 	rm test1_static.o
