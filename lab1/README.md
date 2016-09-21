@@ -9,8 +9,8 @@
 
 编译器不在乎引用的全局变量在哪里定义
 
-# 实验
+# 实验步骤
 
 ## 探索1
 
-环境：Apple LLVM version 7.3.0 (clang-703.0.31)
+*环境：* Apple LLVM version 7.3.0 (clang-703.0.31)
