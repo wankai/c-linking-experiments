@@ -18,3 +18,18 @@
 **步骤：**
 
 1. make
+
+**输出：**
+
+> gcc -c -o test1_alone.o test1.c
+> gcc -c test3.c
+> ar crv libtest3.a test3.o
+> a - test3.o
+> gcc -c -o test1_static.o test1.c -L./ -ltest3
+> clang: warning: -ltest3: 'linker' input unused
+> clang: warning: argument unused during compilation: '-L./'
+> gcc -fPIC -c test4.c
+> gcc -shared -o libtest4.so test4.o
+> gcc -c -o test1_shared.o test1.c -L./ -ltest4
+> clang: warning: -ltest4: 'linker' input unused
+> clang: warning: argument unused during compilation: '-L./'
