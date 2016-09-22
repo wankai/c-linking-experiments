@@ -43,6 +43,10 @@ clang: warning: -ltest4: 'linker' input unused
 clang: warning: argument unused during compilation: '-L./'
 ```
 
+**分析：**
+
+编译器对 -L 和 -l 选项都告警，表明编译器并不需要这些信息。也就是说编译器不在乎引用的全局变量定义在项目内、静态库还是共享库。
+
 **结论：**
 
-编译时不需要链接库信息
+源文件只知道引用了全局变量，不在乎它定义在哪里
