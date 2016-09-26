@@ -43,7 +43,4 @@ clang: warning: argument unused during compilation: '-L./'
 
 **结论：**
 
-源文件只知道引用了全局变量，不在乎它定义在哪里
-
-
-# 实验2
+编译时不需要链接信息。
